@@ -6,6 +6,21 @@
   "main": "dist/corekit.umd.js",
   "module": "dist/corekit.es.js",
   "types": "dist/index.d.ts",
+  "author": "Alex L. Jack",
+  "description": "JackStack CoreKit is a collection of reusable components and utilities for building modern web applications.",
+  "keywords": [
+    "react",
+    "react-hook-form",
+    "vite",
+    "tailwindcss",
+    "typescript",
+    "eslint"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alexljack/JackStack-CoreKit.git"
+  },
   "files": [
     "dist"
   ],
