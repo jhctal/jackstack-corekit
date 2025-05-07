@@ -72,7 +72,6 @@ const Button = ({
   return (
     <button
       type="button"
-      // className={`${ButtonVariants({ variant, size })} ${className}`}
       className={cn(ButtonVariants({ variant, size }), className)}
       {...props}
     >
