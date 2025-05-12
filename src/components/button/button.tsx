@@ -1,20 +1,20 @@
 import { ButtonHTMLAttributes, PropsWithChildren, ReactNode } from "react";
 
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
-  className?: string;
   children: ReactNode;
-  isLoading?: boolean;
+  className?: string;
+  type?: string;
 };
 
 /** Primary UI component for user interaction */
 const Button = ({
   children,
   className,
-  type,
+  type = "button",
   ...props
 }: PropsWithChildren<ButtonProps>) => {
   return (
-    <button type={type || "button"} className={className} {...props}>
+    <button type={type} className={className} {...props}>
       {children}
     </button>
   );
