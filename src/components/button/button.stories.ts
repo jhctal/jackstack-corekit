@@ -5,7 +5,7 @@ import Button from "./button";
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {
-  title: "Example/Button",
+  title: "Button",
   component: Button,
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout
@@ -30,6 +30,12 @@ export const Primary: Story = {
     children: "Primary Button",
     className:
       "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded",
+  },
+};
+
+export const UnstyledBase: Story = {
+  args: {
+    children: "Base Button",
   },
 };
 
