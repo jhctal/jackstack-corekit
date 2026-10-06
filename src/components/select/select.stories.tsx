@@ -77,7 +77,7 @@ const PlaygroundStory = (args: any) => {
 };
 
 const meta: Meta<typeof Select> = {
-  title: "Components/Select",
+  title: "Select",
   component: Select,
   parameters: {
     layout: "centered",
