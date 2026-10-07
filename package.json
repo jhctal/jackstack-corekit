@@ -6,7 +6,7 @@
   "main": "dist/corekit.umd.js",
   "module": "dist/corekit.es.js",
   "types": "dist/index.d.ts",
-  "author": "Alex L. Jack",
+  "author": "Latchlern Jack",
   "description": "JackStack CoreKit is a collection of reusable components and utilities for building modern web applications.",
   "keywords": [
     "react",
@@ -19,7 +19,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/alexljack/JackStack-CoreKit.git"
+    "url": "https://github.com/jhctal/JackStack-CoreKit.git"
   },
   "files": [
     "dist"
@@ -73,6 +73,7 @@
     "eslint-plugin-storybook": "^0.12.0",
     "globals": "^15.15.0",
     "jsdom": "^26.1.0",
+    "lucide-react": "^0.525.0",
     "playwright": "^1.51.1",
     "react-hook-form": "^7.55.0",
     "storybook": "^8.6.12",
