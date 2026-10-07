@@ -35,7 +35,6 @@ export const Disabled: Story = {
   args: {
     value: "yes",
     name: "yes",
-    // placeholder: "Disabled Input",
-    // disabled: true,
+    disabled: true,
   },
 };

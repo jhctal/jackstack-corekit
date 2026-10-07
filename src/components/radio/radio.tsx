@@ -1,30 +1,25 @@
-import React, { useState } from "react";
+import { InputHTMLAttributes } from "react";
 import cn from "../../utils/cn";
 
-type RadioInputProps = {
+type RadioInputProps = InputHTMLAttributes<HTMLInputElement> & {
   radioStyles?: string;
-  value: string;
-  name: string;
 };
 
-const Radio = ({ radioStyles, value, name }: RadioInputProps) => {
-  const [hovered, setHovered] = useState(false);
-  console.log("hovered", hovered);
+const Radio = ({ radioStyles, className, ...props }: RadioInputProps) => {
   return (
-    <>
-      <div
-        onMouseOver={() => setHovered(true)}
-        onMouseLeave={() => setHovered(false)}
-        className={cn(
-          "h-12 w-12 rounded-full border",
-          { "bg-black text-black": hovered, "bg-white": !hovered },
-          radioStyles
-        )}
-      >
-        {/* <div className="h-12 w-12 rounded-full bg-black " /> */}
-      </div>
-      <input type="radio" name={name} value={value} />
-    </>
+    <input
+      type="radio"
+      className={cn(
+        "h-5 w-5 appearance-none rounded-full border border-gray-400 bg-white",
+        "checked:border-4 checked:border-black",
+        "hover:border-gray-600",
+        "focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2",
+        "disabled:cursor-not-allowed disabled:opacity-50",
+        radioStyles,
+        className
+      )}
+      {...props}
+    />
   );
 };
 

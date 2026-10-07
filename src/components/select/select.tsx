@@ -34,7 +34,7 @@ export default function Select({
 }: SelectProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedValue, setSelectedValue] = useState(
-    value || defaultValue || ""
+    value || defaultValue || "",
   );
   const [focusedIndex, setFocusedIndex] = useState(-1);
   const selectRef = useRef<HTMLDivElement>(null);
@@ -114,7 +114,7 @@ export default function Select({
       onFocus?.();
       // Set focus to currently selected option or first option
       const selectedIndex = options.findIndex(
-        (option) => option.value === selectedValue
+        (option) => option.value === selectedValue,
       );
       setFocusedIndex(selectedIndex >= 0 ? selectedIndex : 0);
     } else {
@@ -125,7 +125,7 @@ export default function Select({
 
   const handleOptionSelect = (optionValue: string) => {
     const selectedOption = options.find(
-      (option) => option.value === optionValue
+      (option) => option.value === optionValue,
     );
     if (selectedOption?.disabled) return;
 
@@ -138,7 +138,7 @@ export default function Select({
   };
 
   const selectedOption = options.find(
-    (option) => option.value === selectedValue
+    (option) => option.value === selectedValue,
   );
   const displayText = selectedOption?.label || placeholder;
 
@@ -203,10 +203,10 @@ export default function Select({
                       option.disabled
                         ? "text-gray-400 cursor-not-allowed bg-gray-50"
                         : isFocused
-                        ? "bg-blue-50 text-blue-900"
-                        : isSelected
-                        ? "bg-blue-100 text-blue-900"
-                        : "text-gray-900 hover:bg-gray-50"
+                          ? "bg-blue-50 text-blue-900"
+                          : isSelected
+                            ? "bg-blue-100 text-blue-900"
+                            : "text-gray-900 hover:bg-gray-50"
                     }
                   `}
                   onClick={() => handleOptionSelect(option.value)}
